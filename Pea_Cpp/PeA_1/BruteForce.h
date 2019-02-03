@@ -1,0 +1,29 @@
+#pragma once
+#include "Graph.h"
+
+class BruteForce
+{
+private:
+	int tmpCost;
+	int* tmpRoute;
+
+	bool* visitedCities;
+	int startTop;
+
+	int bestCost;
+	int* bestRoute;
+
+	int whichCity;
+	int iteration;
+
+	bool AllCityVisited(); 
+
+	Graph * graph;
+public:
+	void Resolve(int v);
+	void ShowRoute();
+	std::string returnRoute();
+	BruteForce(Graph * _G);
+	~BruteForce();
+};
+
